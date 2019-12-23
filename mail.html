@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		<title>Mail Us</title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			a{
+				text-decoration: none;
+				color: #fff;
+				font-family: "华文新魏";
+				font-size: 20px;
+			}
+			ol, ul, li{
+				list-style: none;
+			}
+			
+			.banner{
+				width: 100%;
+				height: 380px;
+				background-image: url("images/2.jpg");
+			}
+			.meau{
+				color: #fff;
+			}
+			.banner .p{
+				display: inline-block;
+				font-family: "华文新魏";
+				font-size: 20px;
+			}
+			
+			/*content开始*/
+			.content-wrap{
+				width: 100%;
+				height: 500px;
+			}
+			.content{
+				width: 1100px;
+				height: 500px;
+				margin: 70px auto;
+				position: relative;
+			}
+			.title{
+				font-family: "华文新魏";
+				font-size: 40px;
+				color: rgb(49, 189, 253);
+			}
+			.inputs{
+				margin-top: 50px;
+			}
+			.outer{
+				width: 504px;
+				height: 49px;
+				margin-right: 20px;
+				margin-bottom: 30px;
+				display: inline-block;
+				float: left;
+			}
+			#out{
+				height: 207px;
+				float: right;
+			}
+			.same{
+				width: 500px;
+				height: 45px;
+				background-color: #000;
+				color: #fff;
+				border:2px solid red;
+				display: inline-block;
+				text-indent: 15px;
+				font-family: "宋体";
+				font-size: 15px;
+			}
+			.same:hover{
+				transform: scale(1.1);/*横向纵向均放大为原来的1.1倍*/
+				transition:all 1s ease;/*需要过渡的CSS属性  过渡需要的事件  过渡函数*/
+			}
+			.input{
+				float: left;
+			}
+			#inp{
+				height: 203px;
+				float: right;
+			}
+			#su{
+				width: 200px;
+				position: absolute;
+				bottom: 80px;
+				left: 450px;
+			}
+			/*content结束*/
+			/*pic开始*/
+			.pic-wrap{
+				width: 100%;
+				height: 300px;
+
+			}
+			/*bottom开始*/
+			.bottom{
+				background-color: black;
+				width: 1600px;
+				height: 700px;
+				position: relative;
+			}
+			.bottom .a{
+				float: left;
+				margin-left: 100px;
+				margin-top: 100px;
+				border:white 2px;
+				width: 300px;
+				height: 200px;
+				border-left: solid white;
+				
+			}
+			.bottom span{
+				color: white;
+				font-family: "华文新魏";
+			}
+			.bottom .title{
+				width: 500px;
+				height: 200px;
+				position: absolute;
+				top: 350px;
+				left: 500px;
+			}
+			/*bottom结束*/
+		</style>
+	</head>
+	<body>
+		<div class="banner">
+			<div class="meau">
+				<a href="#">JOY RIDE</a>
+				<p class="p">Call Us:012 345 6789</p>
+			</div>
+		</div>
+		<div class="content-wrap">
+			<form>
+				<div class="content">
+					<div class="title">Mail Us</div>
+					<div class="inputs">
+						<div class="outer" id="out">
+							<textarea name="area" id="inp" class="same">写下你想说的话</textarea>
+						</div>
+						<div class="outer">
+							<input type="text" value="姓名" name="name" class="input same">
+						</div>
+						<div class="outer">
+							<input type="text" value="Email"  name="email" class="input same">
+						</div>
+						<div class="outer">
+							<input type="text" value="电话" name="num" class="input same">
+						</div>
+						<div>
+							<input type="submit" value="提交" name="su" id="su" class="same">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="pic-wrap">
+			<p>图片</p>
+		</div>
+		<div class="bottom">
+			<div class="a" style="margin-left: 250px;">
+				<span style="color: red;font-size:25px;margin-left: 38px;">给我们打电话</span><br><br><br>
+				<span style="margin-left: 38px;">办公电话：1231234564</span><br><br><br>
+				<span style="margin-left: 38px"><span>传真：4564645646</span></span>
+			</div>
+			<div class="a">
+				<span style="color: red;font-size:25px;margin-left: 38px;">探望我们</span><br><br><br>
+				<span style="margin-left: 38px;">河北省石家庄市河北师范大学</span><br><br><br>
+				<span style="margin-left: 38px"><span>诚朴圆三号楼314</span></span>
+			</div>
+			<div class="a">
+				<span style="color: red;font-size:25px;margin-left: 38px;">写信给我们</span><br><br><br>
+				<span style="margin-left: 38px;">邮箱：15646561511@qq.com</span><br><br><br>
+				<span style="margin-left: 38px"><span>咨询： Info@Enquiry.Com</span></span>
+			</div>
+			<div class="title" style="text-align: center;">	
+				<span style="font-size: 40px;color: red">欢乐骑行</span>	<br>
+				<span>学校</span>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			function getStyle(obj, style){
+				if(obj.currentStyle)
+					return obj.currentStyle[style];
+				else
+					return getComputedStyle(obj)[style];
+			}
+
+			//获取所有类名为same的结点
+			var same = document.getElementsByClassName("same");
+			//通过for循环为每个类名为same的结点添加事件属性：鼠标划过和划出、元素获得焦点和失去焦点
+			//添加tag属性用来记录该结点原本的value值
+			for(var i = 0;i < same.length;++i){
+				// same[i].setAttribute("onmouseover", "changeSize(this)");
+				// same[i].setAttribute("onmouseout", "backSize(this)");
+				same[i].setAttribute("tag", same[i].value);
+				same[i].setAttribute("onclick", "changeValue(this)");
+				same[i].setAttribute("onblur", "backValue(this)");
+			}
+			//元素获得焦点
+			function changeValue(that){
+				if(that.value == that.getAttribute("tag") && that.value != "提交")//用户点击了输入框
+					that.value = "";
+			}
+			//元素失去焦点
+			function backValue(that){
+				if(that.value == "")//用户没有输入任何信息
+					that.value = that.getAttribute("tag");
+			}
+			
+		</script>
+	</body>
+</html>
