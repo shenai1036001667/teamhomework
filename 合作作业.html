@@ -95,12 +95,83 @@
 			width: 500px;
 			height: 300px;
 		}
-
+		.bottom{
+			background-color: black;
+			width: 1500px;
+			height: 600px;
+			position: relative;
+			margin-top: 700px;
+			margin-left: 2px;
+		}
+		.bottom .a{
+			float: left;
+			margin-left: 100px;
+			margin-top: 100px;
+			border:white 2px;
+			width: 300px;
+			height: 200px;
+			border-left: solid white;
+			
+		}
+		.bottom span{
+			color: white;
+		}
+		.bottom .title{
+			width: 500px;
+			height: 200px;
+			
+			position: absolute;
+			top: 350px;
+			left: 500px;
+		}
+		.top li a{
+			text-decoration: none;
+			color: black;
+		}
+		.top{
+			width: 100%;
+			height: 65px;
+			margin: 0 auto;
+			background-color: rgb(200,100,100);
+			position:fixed；
+			top: 0px;
+			z-index: 1;
+			background: radial-gradient(red 24%, white 100%);
+		}
+		.top li{
+			transition:all 1s;
+			float: left;
+			list-style: none;
+			margin-left: 200px;
+			line-height: 65px;
+			width: 100px;
+			text-align: center;
+			
+		}
+		.top li:hover{
+			background-color: green;
+		}
+		.top>img{
+			cursor: pointer;
+			position: absolute;
+			top: 50px;
+			left: 300px;
+			margin-top: 20px;
+		}
 	</style>
 </head>
 <body>
-	<div style="height: 380px;overflow: hidden;">
-		<img src="images/2.jpg" >
+	<div class="top" id="top">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">分类</a></li>
+				<li><a href="#">商店</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+			<img src="imgs/x.png" style="position: relative;top:-1px;left: 200px" id="img"> 
+	</div>
+	<div style="height: 380px;overflow: hidden; position: relative;">
+		<img src="images/2.jpg" id="chu">
 	</div>
 	<br><br>
 	<h1 style="font-size: 50px;color: pink">&nbsp&nbsp&nbsp&nbsp&nbsp- Car Shop</h1><br><br>
@@ -309,24 +380,53 @@
 			<img src="imgs/luomiou.jpg" class="n">	
 		</div>
 	</div>
-	<div>
-		<span style="font-size: 30px;position: relative;left: -400px;top: 50px">w12</span>
-		<span style="font-size: 30px;position: relative;left: 150px;top: 50px">v12</span>
-		<div class="fa" style="background: #ffc">
-			<img src="imgs/w12.png">
-			<p>The W12 engine is more compact and quieter in operation. But this is not the most important, the biggest advantage is that its short length can make the car achieve front four-wheel drive.</p>
+	
+	<span style="font-size: 30px;position: relative;left: -400px;top: 50px">w12</span>
+	<span style="font-size: 30px;position: relative;left: 150px;top: 50px">v12</span>
+	<div class="fa" style="background: #ffc">
+		<img src="imgs/w12.png">
+		<p>The W12 engine is more compact and quieter in operation. But this is not the most important, the biggest advantage is that its short length can make the car achieve front four-wheel drive.</p>
+	</div>
+	<div class="fa1" style="background: #ffc">
+		<img src="imgs/v12.png" >
+		<p>European luxury cars often adopt V-engine design with more than 8 cylinders, such as Rolls Royce's and Mercedes Benz's top S600 cars, which are all V12 engines, while V-engine can reach up to 16 cylinders with a displacement of more than 10 liters</p>
+	</div>
+	
+	<div class="bottom">
+		<div class="a" style="margin-left: 250px;">
+			<span style="color: red;font-size:25px;margin-left: 38px;">给我们打电话</span><br><br><br>
+			<span style="margin-left: 38px;">办公电话：1231234564</span><br><br><br>
+			<span style="margin-left: 38px"><span>传真：4564645646</span></span>
 		</div>
-		<div class="fa1" style="background: #ffc">
-			<img src="imgs/v12.png" >
-			<p>European luxury cars often adopt V-engine design with more than 8 cylinders, such as Rolls Royce's and Mercedes Benz's top S600 cars, which are all V12 engines, while V-engine can reach up to 16 cylinders with a displacement of more than 10 liters</p>
+		<div class="a">
+			<span style="color: red;font-size:25px;margin-left: 38px;">探望我们</span><br><br><br>
+			<span style="margin-left: 38px;">河北省石家庄市河北师范大学</span><br><br><br>
+			<span style="margin-left: 38px"><span>诚朴圆三号楼314</span></span>
+		</div>
+		<div class="a">
+			<span style="color: red;font-size:25px;margin-left: 38px;">写信给我们</span><br><br><br>
+			<span style="margin-left: 38px;">邮箱：15646561511@qq.com</span><br><br><br>
+			<span style="margin-left: 38px"><span>咨询： Info@Enquiry.Com</span></span>
+		</div>
+		<div class="title" style="text-align: center;">	
+			<span style="font-size: 40px;color: red">欢乐骑行</span>	<br>
+			<span>学校</span>
 		</div>
 	</div>
 	<script type="text/javascript">
 		var body=document.body;
+		var img=document.getElementById('img');
+		var chu=document.getElementById('chu');
 		var mo=document.getElementsByClassName('mo');
 		var car=document.getElementsByClassName('car');
 		var mas=document.getElementsByClassName('mas');
 		var n=document.getElementsByClassName('n');
+		img.onclick=function(){
+			document.getElementById('top').style.display="none";
+		}
+		chu.onclick=function(){
+			document.getElementById('top').style.display="block";
+		}
 		for(var i=0;i<mo.length;i++){
 			mo[i].idv=i;
 			mo[i].onmouseover=function (){
@@ -367,18 +467,6 @@
 				}
 			}
 		}	
-		var time;	
-		function c(){
-				timer= setInterval(function (){
-				var t= document.getElementById('chepai');
-				t.value=parseInt(t.value)+1;
-			},1)
-		}
-		function stop(){
-			clearInterval(timer);
-			var t= document.getElementById('chepai');
-			t.value='000000';	
-		}
 		car[0].ondblclick=function(){
 			location.href="file:///F:/web%E5%BC%80%E5%8F%91/%E4%BD%9C%E4%B8%9A%E7%94%A8.html";
 		}
