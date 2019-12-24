@@ -2,36 +2,9 @@
 <html>
 	<head>
 		<meta charset = "utf-8" />
-		<title>Mail Us</title>
+		<title>联系我们</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<style type="text/css">
-			*{
-				margin: 0px;
-				padding: 0px;
-			}
-			a{
-				text-decoration: none;
-				color: #fff;
-				font-family: "华文新魏";
-				font-size: 20px;
-			}
-			ol, ul, li{
-				list-style: none;
-			}
-			
-			.banner{
-				width: 100%;
-				height: 380px;
-				background-image: url("images/2.jpg");
-			}
-			.meau{
-				color: #fff;
-			}
-			.banner .p{
-				display: inline-block;
-				font-family: "华文新魏";
-				font-size: 20px;
-			}
-			
 			/*content开始*/
 			.content-wrap{
 				width: 100%;
@@ -44,9 +17,23 @@
 				position: relative;
 			}
 			.title{
+				width: 1100px;
+				height: 42px;
+				line-height: 42px;
+			}
+			.title p{
 				font-family: "华文新魏";
 				font-size: 40px;
 				color: rgb(49, 189, 253);
+				display: inline-block;
+			}
+			.title .heng{
+				display: inline-block;
+				background-color: red;
+				width: 100px;
+				height: 3px;
+				margin-left: 10px;
+				margin-bottom: 10px;
 			}
 			.inputs{
 				margin-top: 50px;
@@ -91,55 +78,29 @@
 				bottom: 80px;
 				left: 450px;
 			}
-			/*content结束*/
-			/*pic开始*/
-			.pic-wrap{
-				width: 100%;
-				height: 300px;
-
-			}
-			/*bottom开始*/
-			.bottom{
-				background-color: black;
-				width: 1600px;
-				height: 700px;
-				position: relative;
-			}
-			.bottom .a{
-				float: left;
-				margin-left: 100px;
-				margin-top: 100px;
-				border:white 2px;
-				width: 300px;
-				height: 200px;
-				border-left: solid white;
-				
-			}
-			.bottom span{
-				color: white;
-				font-family: "华文新魏";
-			}
-			.bottom .title{
-				width: 500px;
-				height: 200px;
-				position: absolute;
-				top: 350px;
-				left: 500px;
-			}
-			/*bottom结束*/
 		</style>
 	</head>
 	<body>
 		<div class="banner">
-			<div class="meau">
-				<a href="#">JOY RIDE</a>
-				<p class="p">Call Us:012 345 6789</p>
+			<div class="top" id="top">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">分类</a></li>
+					<li><a href="#">商店</a></li>
+					<li><a href="#">画廊</a></li>
+					<li><a href="#">联系我们</a></li>
+				</ul>
+				<img src="images/close.png" id="img">
 			</div>
+			<div id="daohang"><a href="#" id="a"><span style="font-size: 30px">==</span></a></div>
 		</div>
 		<div class="content-wrap">
 			<form>
 				<div class="content">
-					<div class="title">Mail Us</div>
+					<div class="title">
+						<p>Mail Us</p>
+						<div class="heng"></div>
+					</div>
 					<div class="inputs">
 						<div class="outer" id="out">
 							<textarea name="area" id="inp" class="same">写下你想说的话</textarea>
@@ -156,35 +117,34 @@
 						<div>
 							<input type="submit" value="提交" name="su" id="su" class="same">
 						</div>
+						
 					</div>
 				</div>
 			</form>
 		</div>
-		<div class="pic-wrap">
-			<p>图片</p>
-		</div>
 		<div class="bottom">
 			<div class="a" style="margin-left: 250px;">
-				<span style="color: red;font-size:25px;margin-left: 38px;">给我们打电话</span><br><br><br>
-				<span style="margin-left: 38px;">办公电话：1231234564</span><br><br><br>
-				<span style="margin-left: 38px"><span>传真：4564645646</span></span>
+				<span class="red">给我们打电话</span><br><br><br>
+				<span>办公电话：1231234564</span><br><br><br>
+				<span><span>传真：4564645646</span></span>
 			</div>
 			<div class="a">
-				<span style="color: red;font-size:25px;margin-left: 38px;">探望我们</span><br><br><br>
-				<span style="margin-left: 38px;">河北省石家庄市河北师范大学</span><br><br><br>
-				<span style="margin-left: 38px"><span>诚朴圆三号楼314</span></span>
+				<span class="red">探望我们</span><br><br><br>
+				<span>河北省石家庄市河北师范大学</span><br><br><br>
+				<span><span>诚朴圆三号楼314</span></span>
 			</div>
 			<div class="a">
-				<span style="color: red;font-size:25px;margin-left: 38px;">写信给我们</span><br><br><br>
-				<span style="margin-left: 38px;">邮箱：15646561511@qq.com</span><br><br><br>
-				<span style="margin-left: 38px"><span>咨询： Info@Enquiry.Com</span></span>
+				<span class="red">写信给我们</span><br><br><br>
+				<span>邮箱：15646561511@qq.com</span><br><br><br>
+				<span><span>咨询： Info@Enquiry.Com</span></span>
 			</div>
 			<div class="title" style="text-align: center;">	
-				<span style="font-size: 40px;color: red">欢乐骑行</span>	<br>
+				<span style="font-size: 40px;" class="red">欢乐骑行</span>	<br>
 				<span>学校</span>
 			</div>
 		</div>
 		
+		<script type="text/javascript" src="nav.js"></script>
 		<script type="text/javascript">
 			function getStyle(obj, style){
 				if(obj.currentStyle)
@@ -198,8 +158,6 @@
 			//通过for循环为每个类名为same的结点添加事件属性：鼠标划过和划出、元素获得焦点和失去焦点
 			//添加tag属性用来记录该结点原本的value值
 			for(var i = 0;i < same.length;++i){
-				// same[i].setAttribute("onmouseover", "changeSize(this)");
-				// same[i].setAttribute("onmouseout", "backSize(this)");
 				same[i].setAttribute("tag", same[i].value);
 				same[i].setAttribute("onclick", "changeValue(this)");
 				same[i].setAttribute("onblur", "backValue(this)");
