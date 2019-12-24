@@ -11,7 +11,7 @@
 		}
 		a{
 			text-decoration: none;
-			color: black;
+			color: white;
 		}
 		.top{
 			display: none;
@@ -22,7 +22,7 @@
 			position: absolute;
 			top: 0px;
 			z-index: 1;
-			background: radial-gradient(red 24%, white 100%);
+			background: radial-gradient(rgb(10,10,30) 24%, white 100%);
 		}
 		.top li{
 			transition:all 1s;
@@ -158,7 +158,7 @@ cursor: pointer;
 
 		}
 		.core{
-			width: 1600px;
+			width: 100%;
 			height: 600px;
 			background-color: #F0FFF0;
 		}
@@ -169,6 +169,25 @@ cursor: pointer;
 		}
 		.core img:hover{
 				box-shadow: 0 0 20px #4E4E4E;
+		}
+		.core-img{
+			width: 350px;
+			height: 190px;
+		z-index: 1;
+			position: relative;
+			vertical-align: center;
+		}
+		.core-in{
+			background-color: rgb(100,100,100,0.7);
+			width: 350px;
+			height: 0px;
+			margin:0px auto;	
+			position: absolute;
+			top: 0px;
+			font-size: 30px;
+			text-align: center;
+			vertical-align: center;
+			color: white;
 		}
 		.core .core-1,.core-2,.core-3{
 			width: 350px;
@@ -195,7 +214,7 @@ cursor: pointer;
 			background-color: green;
 		}
 		.center{
-			width: 1500px;
+			width: 100%;
 			height: 800px;
 			overflow: hidden;
 
@@ -207,6 +226,7 @@ cursor: pointer;
 			height: 600px;
 			
 		}
+
 		.center .cright{
 			float: left;
 			margin-left: 150px;
@@ -240,7 +260,7 @@ cursor: pointer;
 		}
 		.bottom{
 			background-color: black;
-			width: 1600px;
+			width: 100%;
 			height: 600px;
 			position: relative;
 		}
@@ -281,7 +301,7 @@ cursor: pointer;
 					<li><a href="#">商店</a></li>
 					<li><a href="#">联系我们</a></li>
 				</ul>
-				<img src="images/x.png" style="position: relative;top:-1px;left: 200px" id="img">
+				<img src="images/close.png" style="position: relative;top:-1px;left: 200px" id="img">
 			</div>		
 		<div class="slider" id="slider">
 			
@@ -320,7 +340,7 @@ cursor: pointer;
 		<div class="t"><span>^</span></div>
         <div class="b"><span>v</span></div>
         <p style="z-index: 1;color: white;position: absolute;left: 30px;top: -3px;font-size: 30px;">欢乐驾驶</p>
-        <p style="z-index: 1;color: white;position: absolute;left: 30px;">学校</p>
+  
         <div id="daohang"><a href="#" id="a"><span style="font-size: 30px">==</span></a></div>
         <div class="gobottom">⬇</div>
 	</div>
@@ -334,21 +354,21 @@ cursor: pointer;
 	<div class="core">
 		<h1 style="color: #ee7621;text-align: center;">最新消息</h1>
 		<div class="core-1">
-			<img src="images/c1.jpg"><br>
+		    <div class="core-img"><img src="images/c1.jpg"><br><div class="core-in"></div></div>
 			<span style="color: green;font-family:'华文新魏'">2017年6月10号</span><br>
 			<p style="font-weight: bold;font-size: 20px;margin-top: 10px;">公路运输</p>
 			<p style="margin-top: 10px;" class="core-text">Lorem ipsum dolor sit amet, consectetur adipi <br>scingelit. Vestibulum orci justo, vehicula vel <br>sapien et, feugiat sapien. Integer sit amet.</p>
 			<div class="core-read">阅读更多</div>
 		</div>
 		<div class="core-2">
-			<img src="images/c2.jpg"><br>
+			 <div class="core-img"><img src="images/c2.jpg"><br><div class="core-in"></div></div>
 			<span style="color: green;font-family:'华文新魏'">2017年6月17号</span><br>
 			<p style="font-weight: bold;font-size: 20px;margin-top: 10px;">水路运输</p>
 			<p style="margin-top: 10px;" class="core-text">Lorem ipsum dolor sit amet, consectetur adipi <br>scingelit. Vestibulum orci justo, vehicula vel <br>sapien et, feugiat sapien. Integer sit amet.</p>
 			<div class="core-read">阅读更多</div>
 		</div>
 		<div class="core-3">
-			<img src="images/c3.jpg"><br>
+			 <div class="core-img"><img src="images/c3.jpg"><br><div class="core-in"></div></div>
 			<span style="color: green;font-family:'华文新魏'">2017年6月26号</span><br>
 			<p style="font-weight: bold;font-size: 20px;margin-top: 10px;">铁路交通</p>
 			<p style="margin-top: 10px;" class="core-text">Lorem ipsum dolor sit amet, consectetur adipi <br>scingelit. Vestibulum orci justo, vehicula vel <br>sapien et, feugiat sapien. Integer sit amet.</p>
@@ -430,7 +450,62 @@ cursor: pointer;
 		var index = 1;
 		var timer;
 		var isMoving = false;
-		var arr=["g1","g2","g3","g4","g5","g6","g7","g8"]
+		var corein0=document.getElementsByClassName("core-in")[0];
+		var coreimg0=document.getElementsByClassName("core-img")[0];
+		var corein1=document.getElementsByClassName("core-in")[1];
+		var coreimg1=document.getElementsByClassName("core-img")[1];
+		var corein2=document.getElementsByClassName("core-in")[2];
+		var coreimg2=document.getElementsByClassName("core-img")[2];
+		var judge=1;
+		var arr=["g1","g2","g3","g4","g5","g6","g7","g8"];
+		coreimg0.onmouseover=function(){
+			judge=1;
+			var t=parseInt(getStyle(corein0,"height"));	
+			var down=setInterval(function(){
+				
+				corein0.style.height=t+"px";
+				t+=5;	
+				if(t>=192||judge==0){
+					clearInterval(down);
+				}
+			},1)
+		}
+		corein0.onmouseout=function(){
+			judge=0;
+			corein0.style.height=0+"px";
+		}
+		coreimg1.onmouseover=function(){
+			judge=1;
+			var t=parseInt(getStyle(corein1,"height"));	
+			var down=setInterval(function(){
+				
+				corein1.style.height=t+"px";
+				t+=5;	
+				if(t>=192||judge==0){
+					clearInterval(down);
+				}
+			},1)
+		}
+		corein1.onmouseout=function(){
+			judge=0;
+			corein1.style.height=0+"px";
+		}
+		coreimg2.onmouseover=function(){
+			judge=1;
+			var t=parseInt(getStyle(corein2,"height"));	
+			var down=setInterval(function(){
+				
+				corein2.style.height=t+"px";
+				t+=5;	
+				if(t>=192||judge==0){
+					clearInterval(down);
+				}
+			},1)
+		}
+		corein2.onmouseout=function(){
+			judge=0;
+			corein2.style.height=0+"px";
+		}
 		daohang.onclick=function(){
 		      document.getElementById("top").style.display='block';
 		}
