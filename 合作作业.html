@@ -76,6 +76,7 @@
 			transform:  scale(1.5) translateX(50%) translateY(50%);
 		}
 		.fa img{
+			transition:all 1s; 
 			width: 500px;
 			height: 300px;
 		}
@@ -92,6 +93,7 @@
 			transform:  scale(1.5) translateX(-50%) translateY(50%);
 		}
 		.fa1 img{
+			transition:all 1s; 
 			width: 500px;
 			height: 300px;
 		}
@@ -127,6 +129,7 @@
 		.top li a{
 			text-decoration: none;
 			color: black;
+			color: #fff;
 		}
 		.top{
 			width: 100%;
@@ -136,20 +139,20 @@
 			position:fixed；
 			top: 0px;
 			z-index: 1;
-			background: radial-gradient(red 24%, white 100%);
+			background:radial-gradient(rgb(10,10,30) 24%, white 100%);
 		}
 		.top li{
 			transition:all 1s;
 			float: left;
 			list-style: none;
-			margin-left: 200px;
+			margin-left: 100px;
 			line-height: 65px;
 			width: 100px;
 			text-align: center;
 			
 		}
 		.top li:hover{
-			background-color: green;
+			background-color: rgb(100,100,100);
 		}
 		.top>img{
 			cursor: pointer;
@@ -158,20 +161,30 @@
 			left: 300px;
 			margin-top: 20px;
 		}
+		.chu{
+			position: absolute;
+			display: block;
+			top: 20px;
+			right: 50px;
+			cursor: pointer;
+		}
 	</style>
 </head>
 <body>
 	<div class="top" id="top">
 			<ul>
-				<li><a href="#">首页</a></li>
-				<li><a href="#">分类</a></li>
-				<li><a href="#">商店</a></li>
-				<li><a href="#">联系我们</a></li>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="classify.html">分类</a></li>
+				<li><a href="合作作业.html">商店</a></li>
+				<li><a href="车库.html">车库</a></li>
+				<li><a href="services.html">服务</a></li>
+				<li><a href="mail.html">联系我们</a></li>
 			</ul>
-			<img src="imgs/x.png" style="position: relative;top:-1px;left: 200px" id="img"> 
+			<img src="images/close.png" style="position: relative;top:-1px;left: 200px" id="img"> 
 	</div>
 	<div style="height: 380px;overflow: hidden; position: relative;">
-		<img src="images/2.jpg" id="chu">
+		<img src="images/2.jpg">
+		<div class="chu" id="chu"><p style="color: #fff;font-size: 25px">==</p></div>
 	</div>
 	<br><br>
 	<h1 style="font-size: 50px;color: pink">&nbsp&nbsp&nbsp&nbsp&nbsp- Car Shop</h1><br><br>
@@ -193,7 +206,7 @@
 				<p style="font-size: 30px">奥迪A7</p>
 				<p style="font-size: 20px">75-150万</p>
 			</div>
-			<img src="imgs/a7.jpg" class="n">
+			<img src="images/a7.jpg" class="n">
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG2.jpg" class="c">
@@ -201,7 +214,7 @@
 				<p style="font-size: 30px">阿斯顿马丁V8</p>
 				<p style="font-size: 20px">150-300万</p>
 			</div>
-			<img src="imgs/v8.jpg" class="n">			
+			<img src="images/v8.jpg" class="n">			
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG3.jpg" class="c">
@@ -209,7 +222,7 @@
 				<p style="font-size: 30px">奔驰S-AMG</p>
 				<p style="font-size: 20px">150-300万</p>
 			</div>
-			<img src="imgs/amgs.jpg" class="n">	
+			<img src="images/amgs.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG4.jpg" class="c">
@@ -217,7 +230,7 @@
 				<p style="font-size: 30px">宝马7系</p>
 				<p style="font-size: 20px">80-150万</p>
 			</div>
-			<img src="imgs/7xi.jpg" class="n">	
+			<img src="images/7xi.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG5.jpg" class="c">
@@ -225,7 +238,7 @@
 				<p style="font-size: 30px">奔驰GT</p>
 				<p style="font-size: 20px">150-300万</p>
 			</div>
-			<img src="imgs/gt.jpg" class="n">	
+			<img src="images/gt.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG6.jpg" class="c">
@@ -233,7 +246,7 @@
 				<p style="font-size: 30px">保时捷Caycan</p>
 				<p style="font-size: 20px">100-200万</p>
 			</div>
-			<img src="imgs/taycan.jpg" class="n">
+			<img src="images/taycan.jpg" class="n">
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG7.jpg" class="c">
@@ -241,7 +254,7 @@
 				<p style="font-size: 30px">Macan</p>
 				<p style="font-size: 20px">60-120万</p>
 			</div>
-			<img src="imgs/macan.jpg" class="n">	
+			<img src="images/macan.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG8.jpg" class="c">
@@ -249,7 +262,7 @@
 				<p style="font-size: 30px">添越</p>
 				<p style="font-size: 20px">500-700万</p>
 			</div>
-			<img src="imgs/tianyue.jpg" class="n">	
+			<img src="images/tianyue.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG9.jpg" class="c">
@@ -257,7 +270,7 @@
 				<p style="font-size: 30px">林肯大陆</p>
 				<p style="font-size: 20px">35-75万</p>
 			</div>
-			<img src="imgs/dalu.jpg" class="n">	
+			<img src="images/dalu.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG10.jpg" class="c">
@@ -265,7 +278,7 @@
 				<p style="font-size: 30px">途昂</p>
 				<p style="font-size: 20px">30-45万</p>
 			</div>
-			<img src="imgs/tuang.jpg" class="n">	
+			<img src="images/tuang.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG11.jpg" class="c">
@@ -273,7 +286,7 @@
 				<p style="font-size: 30px">polo</p>
 				<p style="font-size: 20px">8-15万</p>
 			</div>
-			<img src="imgs/polo.jpg" class="n">	
+			<img src="images/polo.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG12.jpg" class="c">
@@ -281,7 +294,7 @@
 				<p style="font-size: 30px">法拉利488</p>
 				<p style="font-size: 20px">200-350万</p>
 			</div>
-			<img src="imgs/488.jpg" class="n">	
+			<img src="images/488.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG13.jpg" class="c">
@@ -289,7 +302,7 @@
 				<p style="font-size: 30px">红旗H7</p>
 				<p style="font-size: 20px">30-40万</p>
 			</div>
-			<img src="imgs/q8.jpg" class="n">	
+			<img src="images/q8.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG14.jpg" class="c">
@@ -297,7 +310,7 @@
 				<p style="font-size: 30px">捷豹xj</p>
 				<p style="font-size: 20px">80-120万</p>
 			</div>
-			<img src="imgs/xj.jpg" class="n">	
+			<img src="images/xj.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG15.jpg" class="c">
@@ -305,7 +318,7 @@
 				<p style="font-size: 30px">凯迪拉克ct6</p>
 				<p style="font-size: 20px">35-50万</p>
 			</div>
-			<img src="imgs/ct6.jpg" class="n">	
+			<img src="images/ct6.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG16.jpg" class="c">
@@ -313,7 +326,7 @@
 				<p style="font-size: 30px">雷克萨斯ls</p>
 				<p style="font-size: 20px">90-130万</p>
 			</div>
-			<img src="imgs/ls.jpg" class="n">	
+			<img src="images/ls.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG17.jpg" class="c">
@@ -321,7 +334,7 @@
 				<p style="font-size: 30px">揽胜</p>
 				<p style="font-size: 20px">150-200万</p>
 			</div>
-			<img src="imgs/lansheng.jpg" class="n">	
+			<img src="images/lansheng.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG18.jpg" class="c">
@@ -329,7 +342,7 @@
 				<p style="font-size: 30px">慕尚</p>
 				<p style="font-size: 20px">700-1000万</p>
 			</div>
-			<img src="imgs/mushang.jpg" class="n">	
+			<img src="images/mushang.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG19.jpg" class="c">
@@ -337,7 +350,7 @@
 				<p style="font-size: 30px">库里南</p>
 				<p style="font-size: 20px">650-900万</p>
 			</div>
-			<img src="imgs/kulinan.jpg" class="n">	
+			<img src="images/kulinan.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG20.jpg" class="c">
@@ -345,7 +358,7 @@
 				<p style="font-size: 30px">幻影</p>
 				<p style="font-size: 20px">900-1000万</p>
 			</div>
-			<img src="imgs/huanying.jpg" class="n">	
+			<img src="images/huanying.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG21.jpg" class="c">
@@ -353,7 +366,7 @@
 				<p style="font-size: 30px">urus</p>
 				<p style="font-size: 20px">150-300万</p>
 			</div>
-			<img src="imgs/urus.jpg" class="n">	
+			<img src="images/urus.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG22.jpg" class="c">
@@ -361,7 +374,7 @@
 				<p style="font-size: 30px">总裁</p>
 				<p style="font-size: 20px">150-250万</p>
 			</div>
-			<img src="imgs/zongcai.jpg" class="n">	
+			<img src="images/zongcai.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG23.jpg" class="c">
@@ -369,7 +382,7 @@
 				<p style="font-size: 30px">迈凯伦720s</p>
 				<p style="font-size: 20px">300-500万</p>
 			</div>
-			<img src="imgs/720s.jpg" class="n">	
+			<img src="images/720s.jpg" class="n">	
 		</div>
 		<div class="car">
 			<img src="images/imagesIMG24.jpg" class="c">
@@ -377,18 +390,18 @@
 				<p style="font-size: 30px">特斯拉model-X</p>
 				<p style="font-size: 20px">80-150万</p>
 			</div>
-			<img src="imgs/luomiou.jpg" class="n">	
+			<img src="images/luomiou.jpg" class="n">	
 		</div>
 	</div>
 	
 	<span style="font-size: 30px;position: relative;left: -400px;top: 50px">w12</span>
 	<span style="font-size: 30px;position: relative;left: 150px;top: 50px">v12</span>
 	<div class="fa" style="background: #ffc">
-		<img src="imgs/w12.png">
+		<img src="images/w12.png">
 		<p>The W12 engine is more compact and quieter in operation. But this is not the most important, the biggest advantage is that its short length can make the car achieve front four-wheel drive.</p>
 	</div>
 	<div class="fa1" style="background: #ffc">
-		<img src="imgs/v12.png" >
+		<img src="images/v12.png" >
 		<p>European luxury cars often adopt V-engine design with more than 8 cylinders, such as Rolls Royce's and Mercedes Benz's top S600 cars, which are all V12 engines, while V-engine can reach up to 16 cylinders with a displacement of more than 10 liters</p>
 	</div>
 	
