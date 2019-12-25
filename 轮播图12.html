@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>轮播图</title>
+</head>
+<style type="text/css">
+	.content1{
+		position: fixed;
+	    left: 0px;
+	    top: 0px;
+	    width: 100%;
+	    height: 100%;
+	    background: url(images/2.jpg) no-repeat;
+	    background-color: #000;
+	    opacity: 0.82;
+	}
+	.close{
+		position: fixed;
+	    top: 30px;
+	    right: 30px;
+	    width: 26px;
+	    height: 26px;
+	    background: url(images/close.png) no-repeat;
+	}
+	.box1{
+	width: 100%;
+	height: 436px;
+	position: relative;
+	top: 177.5px;
+	display: block;
+	}
+	.box2{
+		width: 640px;
+		height: 436px;
+		position: absolute;
+		left: 430px;
+		overflow: hidden;
+	}
+	.photos1{
+		width: 8960px;
+		position: absolute;
+		left: -640px;
+	}
+	.photo{
+		width: 640px;
+		overflow:hidden;
+		float: left;
+	}
+	.right{
+		right: 35px;
+    	background: url(images/right.png) no-repeat;
+    	position: absolute;
+	    top: 50%;
+	    width: 51px;
+	    height: 51px;
+	    cursor: pointer;
+	    opacity: 0;
+	}
+	.left{
+		left: 35px;
+    	background: url(images/left.png) no-repeat;
+    	position: absolute;
+	    top: 50%;
+	    width: 51px;
+	    height: 51px;
+	    cursor: pointer;
+	    opacity: 0;
+	}
+	.buttom{
+	position: fixed;
+    left: 0;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+	}
+	li{
+		display: inline-block;
+	    width: 50px;
+	    height: 50px;
+	    margin: 6px 3px 0 3px;
+	    border: 1px solid #ddd;
+	    border-radius: 10px;
+	    box-shadow: 0 0 2px #000;
+	    opacity: 0.5;
+	    overflow: hidden;
+	    cursor: pointer;
+	}
+	li img{
+		height: 50px;
+		border:0px;
+	}
+	.nav .active{
+		opacity: 1.0;
+	}
+	
+</style>
+<body>
+	<div class="content1"></div>
+	<a href="画廊.html" style="display: block;" class="close"></a>
+	<div class="box1">
+		<div class="box2">
+			<div class="photos1">
+				<div class="photo"><img src="images/g11.jpg"></div>
+				<div class="photo"><img src="images/g12.jpg"></div>
+				<div class="photo"><img src="images/g1.jpg"></div>
+				<div class="photo"><img src="images/g2.jpg"></div>
+				<div class="photo"><img src="images/g3.jpg"></div>
+				<div class="photo"><img src="images/g4.jpg"></div>
+				<div class="photo"><img src="images/g5.jpg"></div>
+				<div class="photo"><img src="images/g6.jpg"></div>
+				<div class="photo"><img src="images/g7.jpg"></div>
+				<div class="photo"><img src="images/g8.jpg"></div>
+				<div class="photo"><img src="images/g9.jpg"></div>
+				<div class="photo"><img src="images/g10.jpg"></div>
+				<div class="photo"><img src="images/g11.jpg"></div>
+				<div class="photo"><img src="images/g12.jpg"></div>
+			</div>
+		</div>
+		<div class="right"></div>
+		<div class="left"></div>
+		<div class="buttom">
+			<ul class="nav">
+				<li class="active"><img src="images/g12.jpg"></li>
+				<li><img src="images/g1.jpg"></li>
+				<li><img src="images/g2.jpg"></li>
+				<li><img src="images/g3.jpg"></li>
+				<li><img src="images/g4.jpg"></li>
+				<li><img src="images/g5.jpg"></li>
+				<li><img src="images/g6.jpg"></li>
+				<li><img src="images/g7.jpg"></li>
+				<li><img src="images/g8.jpg"></li>
+				<li><img src="images/g9.jpg"></li>
+				<li><img src="images/g10.jpg"></li>
+				<li><img src="images/g11.jpg"></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var box1 = document.getElementsByClassName('box1')[0];
+		var box2 = document.getElementsByClassName('box2')[0];
+		var photos1 = document.getElementsByClassName('photos1')[0];
+		var photo = document.getElementsByClassName('photo')[0];
+		var right = document.getElementsByClassName('right')[0];
+		var left = document.getElementsByClassName('left')[0];
+		var actlist = document.getElementsByClassName('nav')[0].children;
+		var num = 1;
+		var timer;
+		var isMoving = false;
+		function next(){
+		 	if (isMoving) {
+		 		return;
+		 	}
+		 	isMoving =true;
+		 	num++; 
+		 	navchange();
+		 	animate(photos1,{left:-640*num},function(){
+		 		if (num==13) {
+		 			photos1.style.left = "-640px";
+		 			num = 1;
+		 		}
+		 		isMoving =false;
+		 	});
+		 }
+		  function prev(){
+		  	if (isMoving) {
+		 		return;
+		 	}
+		 	isMoving =true;
+		 	num--;
+		 	navchange();
+		 	animate(photos1,{left:-640*num},function(){
+		 		if (num== 0) {
+		 			photos1.style.left = "-7680px";
+		 			num = 12;
+		 		}
+		 		isMoving =false;
+		 	});
+		 }
+		 var timer = setInterval(next,2000);
+		 //鼠标划入清定时器
+		 box1.onmouseover = function(){
+		 	animate(left,{opacity:50});
+		 	animate(right,{opacity:50});
+		 	clearInterval(timer);
+		 }
+		 //鼠标划出开定时器
+		 box1.onmouseout = function(){
+		 	animate(left,{opacity:0});
+		 	animate(right,{opacity:0});
+		 	timer = setInterval(next,2000);
+		 }
+		 right.onclick = next;
+		 left.onclick = prev;
+
+		 for (var i = 0; i < 12; i++) {
+		 	actlist[i].idx = i;
+		 	actlist[i].onclick = function(){
+		 		num = this.idx +1;
+		 		navchange();
+		 		animate(photos1,{left:-640*num});
+		 	}
+		 }
+		 function navchange(){
+		 	for (var i = 0; i < actlist.length; i++) {
+		 		actlist[i].className = '';
+		 	}
+		 	if (num == 13) {
+		 		actlist[0] . className = 'active';
+		 	}else if (num ==0){
+		 		actlist[12].className = 'active';
+		 	}else{
+		 		actlist[num-1].className = 'active';
+		 	}	 	
+		 }
+		function getStyle(obj, attr){
+			if(obj.currentStyle){
+				return obj.currentStyle[attr];
+			} else {
+				return getComputedStyle(obj, null)[attr];
+			}
+		}
+		function animate(obj,json,callback){
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){
+				var isStop = true;
+				for(var attr in json){
+					var now = 0;
+					
+					if(attr == 'opacity'){
+						now = parseInt(getStyle(obj,attr)*100);
+					}else{
+						now = parseInt(getStyle(obj,attr));
+					}
+					var speed = (json[attr] - now) / 8;
+					speed = speed>0?Math.ceil(speed):Math.floor(speed);
+					var cur = now + speed;
+					if(attr == 'opacity'){
+						obj.style[attr] = cur / 100;
+					}else{
+						obj.style[attr] = cur + 'px';
+					}
+					if(json[attr] !== cur){
+						isStop = false;
+					}
+				}
+				if(isStop){
+					clearInterval(obj.timer);
+					callback&&callback();
+				}
+			}, 30)
+		}
+	</script>
+</body>
+</html>
