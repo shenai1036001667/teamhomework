@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>画廊</title>
+	<style type="text/css">
+	.top{
+		width: 100%;
+		background-image: url(images/2.jpg);
+		background-repeat: no-repeat;
+		background-position: 0px 0px;
+		background-size: cover;
+		/*背景图像的大小：此时会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小。*/
+	    height: 300px;
+	}
+	.top:hover .top1{
+		display: inline-block;
+	}
+	.top1 a{
+		text-decoration: none;
+		color: black;
+	}
+	.top1{
+		display: none;
+		width: 1503px;
+		height: 65px;
+		margin: 0 auto;
+		background-color: rgb(200,100,100);
+		position: absolute;
+		top: 0px;
+		z-index: 1;
+		background: radial-gradient(rgb(10,10,30) 24%, white 100%);
+	}
+	.top ul{
+		height: 65px;
+		margin: 0px;
+	}
+	.top1 li{
+		transition:all 1s;
+		float: left;
+		list-style: none;
+		margin-left: 100px;
+		line-height: 65px;
+		width: 100px;
+		text-align: center;			
+		}
+	.top1 li:hover{
+		background-color: rgb(100,100,100);
+	}
+	.top1 a{
+		color: white;
+	}
+	.top1>img{
+		cursor: pointer;
+		position: absolute;
+		top: 50px;
+		left: 300px;
+		margin-top: 20px;
+	}
+	.content{
+		padding: 85px 0px;
+		height: 800px;
+	}
+	.con1{
+		width: 1170px;
+		height: 800px;
+		padding-right: 15px;
+	    padding-left: 15px;
+	    margin: 0px auto;
+	}
+	.con1-h3{
+	margin: 0px;
+	color: #31bdfd;
+    font-size: 4em;
+    font-weight: 500;
+    position: relative;
+	}
+	.con2{
+		margin-top: 65px;
+		height: 600px;
+	}
+	.photos{
+		margin: 10px;
+		height: 600px;
+		padding: 0px;
+	}
+	.photos> li{
+		list-style-type: none;
+		/*display: inline-block;*/
+		margin: 10px;
+		float: left;
+		position: relative;
+	}
+	.photos> li img{
+		width: 265px;
+    	cursor: pointer;
+    	/*光标：光标呈现为指示链接的指针（一只手）*/
+	}
+	.photos> li div{
+		position: absolute;
+		left:0px; 
+		top: 0px;
+		font-size: 2em;
+		display: none;
+		width: 265px;
+		height: 184px;
+
+	}
+	.photos> li div h3{
+		position: absolute;
+		color: #8EE5EE;
+		top: 35px;
+		left: 60px;
+
+	}
+	.photos> li:hover div{
+		display: inline-block;
+		background-color: rgba(71,71,68,0.6);
+		cursor: pointer;
+	}
+	.bottom{
+		background-color: black;
+		width: 100%;
+		height: 600px;
+		position: relative;
+	}
+	.bottom .a{
+		float: left;
+		margin-left: 100px;
+		margin-top: 100px;
+		border:white 2px;
+		width: 300px;
+		height: 200px;
+		border-left: solid white;
+			
+	}
+	.bottom span{
+		color: white;
+		font-family: "华文新魏";
+	}
+	.bottom .title{
+		width: 500px;
+		height: 200px;
+		position: absolute;
+		top: 350px;
+		left: 500px;
+	}
+
+
+</style>
+</head>
+<body>
+	<div class="top">
+		<div class="top1" id="top1">
+			<ul>
+				<li><a href="home.html">首页</a></li>
+				<li><a href="classify.html">分类</a></li>
+				<li><a href="合作作业.html">商店</a></li>
+				<li><a href="车库.html">车库</a></li>
+				<li><a href="services.html">服务</a></li>
+				<li><a href="mail.html">联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="content">
+		<div class="con1">
+			<h3 class="con1-h3">车库 <span style="color: red;">———</span></h3>
+			<div class="con2">
+				<ul class="photos">
+					<li><img src="images/g1.jpg">
+						<div>
+							<a href="轮播图1.html"><h3>精品内饰</h3></a>
+						</div>
+					</li>
+					<li><img src="images/g2.jpg">
+						<div>
+							<a href="轮播图2.html"><h3>精品内饰</h3></a>
+						</div>
+					</li>
+					<li><img src="images/g3.jpg">
+						<div>
+							<a href="轮播图3.html"><h3>精品内饰</h3></a>
+						</div>
+					</li>
+					<li><img src="images/g4.jpg">
+						<div>
+							<a href="轮播图4.html"><h3>精品内饰</h3></a>
+						</div>
+					</li>
+					<li><img src="images/g5.jpg">
+						<div>
+							<a href="轮播图5.html"><h3>精品内饰</h3></a>
+						</div>
+					</li>
+					<li><img src="images/g6.jpg">
+						<div>
+							<a href="轮播图6.html"><h3>精品内饰</h3></a>
+						</div>
+					</li>
+					<li><img src="images/g7.jpg">
+						<div>
+							<a href="轮播图7.html"><h3>精品内饰</h3></a>
+						</div>
+					</li>
+						<li><img src="images/g8.jpg">
+						<div>
+							<a href="轮播图8.html"><h3>精品内饰</h3></a>
+						</div>
+					</li>
+					<li>
+						<img src="images/g9.jpg">
+						<div>
+							<a href="轮播图.html"><h3>精品内饰</h3></a>
+						</div>
+					</li>
+					<li><img src="images/g10.jpg">
+						<div>
+							<a href="轮播图10.html"><h3>精品内饰</h3></a>
+						</div>
+					</li>
+					<li><img src="images/g11.jpg">
+						<div>
+							<a href="轮播图11.html"><h3>精品内饰</h3></a>
+						</div>
+					</li>
+					<li><img src="images/g12.jpg">
+						<div>
+							<a href="轮播图12.html"><h3>精品内饰</h3></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="bottom">
+		<div class="a" style="margin-left: 250px;">
+			<span style="color: red;font-size:25px;margin-left: 38px;">给我们打电话</span><br><br><br>
+			<span style="margin-left: 38px;">办公电话：1231234564</span><br><br><br>
+			<span style="margin-left: 38px"><span>传真：4564645646</span></span>
+		</div>
+		<div class="a">
+			<span style="color: red;font-size:25px;margin-left: 38px;">探望我们</span><br><br><br>
+			<span style="margin-left: 38px;">河北省石家庄市河北师范大学</span><br><br><br>
+			<span style="margin-left: 38px"><span>诚朴圆三号楼314</span></span>
+		</div>
+		<div class="a">
+			<span style="color: red;font-size:25px;margin-left: 38px;">写信给我们</span><br><br><br>
+			<span style="margin-left: 38px;">邮箱：15646561511@qq.com</span><br><br><br>
+			<span style="margin-left: 38px"><span>咨询： Info@Enquiry.Com</span></span>
+		</div>
+		<div class="title" style="text-align: center;">	
+			<span style="font-size: 40px;color: red">欢乐骑行</span>	<br>
+			<span>学校</span>
+		</div>
+	</div>
+</body>
+
+</html>
