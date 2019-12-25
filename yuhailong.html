@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<style type="text/css">
+
+		/**{
+			margin: 0px;
+			padding: 0px;
+		}
+		a{
+			text-decoration: none;
+			color: white;
+		}
+		.top{
+			display: none;
+			width: 100%;
+			height: 65px;
+			margin: 0 auto;
+			background-color: rgb(200,100,100);
+			position: absolute;
+			top: 0px;
+			z-index: 1;
+			background: radial-gradient(rgb(10,10,30) 24%, white 100%);
+		}
+		.top li{
+			transition:all 1s;
+			float: left;
+			list-style: none;
+			margin-left: 200px;
+			line-height: 65px;
+			width: 100px;
+			text-align: center;
+			
+		}
+		.top li:hover{
+			background-color: rgb(100,100,100);
+		}
+		.top>img{
+			cursor: pointer;
+			position: absolute;
+			top: 50px;
+			left: 300px;
+			margin-top: 20px;
+		}
+		#daohang{
+			position: absolute;
+			left: 1400px;
+			top: 20px;
+			
+		}*/
+
+		.box{
+			width: 1518px;
+			height: 720px;
+			border:1px ;
+			margin: 10px auto;
+			position: relative;
+			overflow: hidden;
+			top: -10px;
+		}
+		.box .gobottom{
+			cursor: pointer;
+			position: absolute;
+			bottom: 0px;
+			width: 40px;
+			height: 80px;
+			left: 750px;
+			color: white;
+			font-size: 50px;
+			text-align: center;
+			line-height: 80px;
+			border:1px dashed white;
+			border-radius: 30%;
+		}
+		.t{
+cursor: pointer;
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			
+			text-align: center;
+			line-height: 30px;
+			font-size: 30px;
+			color: white;
+			top: 220px;
+			left: 1455px;
+		}
+		.b{
+			cursor: pointer;
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			/*background-color: blue;*/
+			text-align: center;
+			line-height: 30px;
+			font-size: 30px;
+			color: white;
+			left: 1455px;
+			top: 370px;
+		}
+		.slider{
+			width: 7590px;
+			position: absolute;
+
+			left: -1518px;
+		}
+		.slide{
+			width: 1518px;
+			overflow: hidden;
+			float: left;
+		}
+		.box>span{
+			display: block;
+			width: 30px;
+			height: 50px;
+			text-align: center;
+			cursor: pointer;
+			color: #ccc;
+			top: 175px;
+			line-height: 50px;
+			background: rgb(255,0,0);
+			font-size: 30px;
+			position: absolute;
+			opacity: 0;
+		}
+		
+		.nav>li{
+
+			cursor: pointer;
+			width: 20px;
+			height: 20px;
+			background: #ccc;
+			cursor: pointer;
+			margin: 0 10px;
+			border-radius: 50%;
+			list-style:none;
+			text-align: center;
+			margin-top: 15px;
+		}
+		 
+		.expand:hover{
+			opacity: 0.5;
+			transform: scale(1.5) translateX(0%) translateY(20%);/*scale:图片放大几倍；translateX,translateY:放大后图片的位移*/
+    		border: 1px solid #999;
+    		box-shadow: 0 0 20px #4E4E4E;
+		}
+		 .expand{transition:all 1s;}
+		.nav{
+			height: 30px;
+			position: relative;
+			top: 250px;
+			left: 1450px;
+		}
+		.nav .active{
+			background: radial-gradient(red 24%, white 100%);
+
+		}
+		.core{
+			width: 100%;
+			height: 600px;
+			background-color: #F0FFF0;
+		}
+		.core img{
+			width: 350px;
+			height: 190px;
+			
+		}
+		.core img:hover{
+				box-shadow: 0 0 20px #4E4E4E;
+		}
+		.core-img{
+			width: 350px;
+			height: 190px;
+		z-index: 1;
+			position: relative;
+			vertical-align: center;
+		}
+		.core-in{
+			background-color: rgb(100,100,100,0.7);
+			width: 350px;
+			height: 0px;
+			margin:0px auto;	
+			position: absolute;
+			top: 0px;
+			font-size: 30px;
+			text-align: center;
+			vertical-align: center;
+			color: white;
+		}
+		.core .core-1,.core-2,.core-3{
+			width: 350px;
+			float: left;
+			margin-left: 120px;
+			margin-top: 40px;
+		}
+		.core-text{
+			color: rgb(100,100,100,0.7);
+		}
+		.core-read{
+			cursor: pointer;
+			width: 100px;
+			height: 40px;
+			background-color: #ff4040;
+			color: white;
+			line-height: 40px;
+			font-size: 17px;
+			text-align: center;
+			margin-top: 15px;
+			transition:all 1s;
+		}
+		.core-read:hover{
+			background-color: green;
+		}
+		.center{
+			width: 100%;
+			height: 800px;
+			overflow: hidden;
+
+		}
+		.center .cleft{
+			float: left;
+			margin-left: 160px;
+			width: 550px;
+			height: 600px;
+			
+		}
+
+		.center .cright{
+			float: left;
+			margin-left: 150px;
+			width: 550px;
+			height: 600px;
+			position: relative;
+		}
+		#one{
+			width: 550px;
+			height: 100px;
+			
+			margin-top: 90px;
+			background-image: url(images/img1.png);
+			background-repeat: no-repeat;
+		}
+		#two{
+			width: 550px;
+			height: 100px;
+			
+			background-image: url(images/img2.png);
+			background-repeat: no-repeat;
+			margin-top: 20px;
+		}
+		#three{
+			width: 550px;
+			height: 100px;
+			
+			background-image: url(images/img3.png);
+			background-repeat: no-repeat;
+			margin-top: 20px;
+		}
+		/*.bottom{
+			background-color: black;
+			width: 100%;
+			height: 600px;
+			position: relative;
+		}
+		.bottom .a{
+			float: left;
+			margin-left: 100px;
+			margin-top: 100px;
+			border:white 2px;
+			width: 300px;
+			height: 200px;
+			border-left: solid white;
+			
+		}
+		.bottom span{
+			color: white;
+			font-family: "华文新魏";
+		}
+		.bottom .title{
+			width: 500px;
+			height: 200px;
+			
+			position: absolute;
+			top: 350px;
+			left: 500px;
+		}*/
+	</style>
+	
+</head>
+<body>
+	
+	
+	<div class="box" id="box">
+		
+			<div class="top" id="top">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">分类</a></li>
+					<li><a href="#">商店</a></li>
+					<li><a href="#">画廊</a></li>
+					<li><a href="#">联系我们</a></li>
+				</ul>
+				<img src="images/close.png" id="img">
+			</div>		
+		<div class="slider" id="slider">
+			
+			<div class="slide">
+				<img src="images/3.jpg" alt="" >
+				<p style="z-index: 1;color: white;position: relative;top: -780px;left: 300px;">欢迎来到我们驾驶学校</p>
+				<p style="z-index: 1;color: white;position: relative;top: -780px;left: 300px;font-size: 55px;" >和我们一起开一辆新车</p>
+			</div>
+			<div class="slide">
+				<img src="images/1.jpg" alt="" >
+				<p style="z-index: 1;color: white;position: relative;top: -780px;left: 300px;">欢迎来到我们驾驶学校</p>
+				<p style="z-index: 1;color: white;position: relative;top: -780px;left: 300px;font-size: 55px;" >提供仔细的培训</p>
+			</div>
+			<div class="slide">
+				<img src="images/2.jpg" alt="" >
+				<p style="z-index: 1;color: white;position: relative;top: -780px;left: 300px;">欢迎来到我们驾驶学校</p>
+				<p style="z-index: 1;color: white;position: relative;top: -780px;left: 300px;font-size: 55px;" >在线驾驶课程</p>
+			</div>
+			<div class="slide">
+				<img src="images/3.jpg" alt="" >
+				<p style="z-index: 1;color: white;position: relative;top: -780px;left: 300px;">欢迎来到我们驾驶学校</p>
+				<p style="z-index: 1;color: white;position: relative;top: -780px;left: 300px;font-size: 55px;" >和我们一起开一辆新车</p>
+			</div>
+			<div class="slide">
+				<img src="images/1.jpg" alt="" >
+			<p style="z-index: 1;color: white;position: relative;top: -780px;left: 300px;">欢迎来到我们驾驶学校</p>
+				<p style="z-index: 1;color: white;position: relative;top: -780px;left: 300px;font-size: 55px;" >提供仔细的培训</p>
+			</div>
+		</div>
+		
+		<ul class="nav" id="nav">
+			<li class="active"></li>
+			<li></li>
+			<li></li>			
+		</ul>
+		<div class="t"><span>^</span></div>
+        <div class="b"><span>v</span></div>
+        <p style="z-index: 1;color: white;position: absolute;left: 30px;top: -3px;font-size: 30px;">欢乐驾驶</p>
+  
+        <div id="daohang"><a href="#" id="a"><span style="font-size: 30px">==</span></a></div>
+        <div class="gobottom">⬇</div>
+	</div>
+	<div style="height: 500px;background-image: url(images/666.jpg);background-position: right;background-repeat: no-repeat;margin-left:150px;">
+		<div style="width: 700px;"> 
+			<h1 style="color: blue">Welcome------</h1><br><br>
+			<p style="font-size: 30px;color: rgb(100,100,100,0.8);">Our Company is the leading manufacturer of traffic, regulatory and safety signs in the country today.</p><br><br><br>
+			<p style="display: inline;opacity: 50;color: rgb(100,100,100,0.8);">Lorem ipsum dolor sit amet, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+	</div>
+	<div class="core">
+		<h1 style="color: #ee7621;text-align: center;">最新消息</h1>
+		<div class="core-1">
+		    <div class="core-img"><img src="images/c1.jpg"><br><div class="core-in"></div></div>
+			<span style="color: green;font-family:'华文新魏'">2017年6月10号</span><br>
+			<p style="font-weight: bold;font-size: 20px;margin-top: 10px;">公路运输</p>
+			<p style="margin-top: 10px;" class="core-text">Lorem ipsum dolor sit amet, consectetur adipi <br>scingelit. Vestibulum orci justo, vehicula vel <br>sapien et, feugiat sapien. Integer sit amet.</p>
+			<div class="core-read">阅读更多</div>
+		</div>
+		<div class="core-2">
+			 <div class="core-img"><img src="images/c2.jpg"><br><div class="core-in"></div></div>
+			<span style="color: green;font-family:'华文新魏'">2017年6月17号</span><br>
+			<p style="font-weight: bold;font-size: 20px;margin-top: 10px;">水路运输</p>
+			<p style="margin-top: 10px;" class="core-text">Lorem ipsum dolor sit amet, consectetur adipi <br>scingelit. Vestibulum orci justo, vehicula vel <br>sapien et, feugiat sapien. Integer sit amet.</p>
+			<div class="core-read">阅读更多</div>
+		</div>
+		<div class="core-3">
+			 <div class="core-img"><img src="images/c3.jpg"><br><div class="core-in"></div></div>
+			<span style="color: green;font-family:'华文新魏'">2017年6月26号</span><br>
+			<p style="font-weight: bold;font-size: 20px;margin-top: 10px;">铁路交通</p>
+			<p style="margin-top: 10px;" class="core-text">Lorem ipsum dolor sit amet, consectetur adipi <br>scingelit. Vestibulum orci justo, vehicula vel <br>sapien et, feugiat sapien. Integer sit amet.</p>
+			<div class="core-read">阅读更多</div>
+		</div>
+	</div>
+	<div class="center"> 
+		<div class="cleft"> 
+
+			<p style="font-size: 35px">工作过程<span style="color: red">—————</span></p>
+			<img src="images/g1.jpg" style="width: 550px;margin-top: 50px;cursor: pointer;" id="turn">
+			<div style="width: 550px;height: 100px;border-left: red solid 3px">
+				<p style="font-size: 30px">100％推动成功</p><br><br>
+				<p style="opacity: 0.5">完整的课程，提供仔细的培训，和我们一起开一辆新车</p>
+			</div>
+		</div>
+		<div class="cright">
+			<div id="one">
+				<p style="font-size: 25px;margin-left: 100px">全车保险</p>
+				<p style="margin-left: 100px;opacity: 0.5">坐下，一直保持着上风。绝对有效，即刻起义，擅自调教的实验室。</p>
+			</div>
+			<div id="two">
+				<p style="font-size: 25px;margin-left: 100px">经验丰富的讲师</p>
+				<p style="margin-left: 100px;opacity: 0.5">坐下，一直保持着上风。绝对有效，即刻起义，擅自调教的实验室。</p>
+			</div>
+			<div id="three">
+				<p style="font-size: 25px;margin-left: 100px">驾驶教育</p>
+				<p style="margin-left: 100px;opacity: 0.5">坐下，一直保持着上风。绝对有效，即刻起义，擅自调教的实验室。</p>
+			</div>
+			
+		</div>
+	</div>
+	<div style="display: block;">
+		<div style="float: left;width: 500px"><a href="#"><img src="images/one.jpg" style="width: 500px" class="expand"></a></div>
+		<div style="float: left;width: 500px"><a href="#"><img src="images/two.jpg" style="width: 500px" class="expand"></a></div>
+		<div style="float: left;width: 500px"><a href="#"><img src="images/three.jpg" style="width: 500px" class="expand"></a></div>
+	</div>
+	<div style="width: 1500px; height: 300px;">
+	
+	</div>
+	<div class="bottom">
+			<div class="a" style="margin-left: 250px;">
+				<span class="red">给我们打电话</span><br><br><br>
+				<span>办公电话：1231234564</span><br><br><br>
+				<span><span>传真：4564645646</span></span>
+			</div>
+			<div class="a">
+				<span class="red">探望我们</span><br><br><br>
+				<span>河北省石家庄市河北师范大学</span><br><br><br>
+				<span><span>诚朴圆三号楼314</span></span>
+			</div>
+			<div class="a">
+				<span class="red">写信给我们</span><br><br><br>
+				<span>邮箱：15646561511@qq.com</span><br><br><br>
+				<span><span>咨询： Info@Enquiry.Com</span></span>
+			</div>
+			<div class="title" style="text-align: center;">	
+				<span style="font-size: 40px;" class="red">欢乐骑行</span>	<br>
+				<span>学校</span>
+			</div>
+		</div>
+	<script type="text/javascript" >
+		var gobottom=document.getElementsByClassName("gobottom")[0];
+		var img=document.getElementById("img");
+		var daohang=document.getElementById("daohang");
+		var top=document.getElementsByClassName("top")[0];
+		var turn =document.getElementById("turn");
+		var cright=document.getElementsByClassName("cright")[0];
+		var cleft=document.getElementsByClassName("cleft")[0];
+		var center=document.getElementsByClassName("center")[0];
+		var t=document.getElementsByClassName("t")[0];		
+		var b=document.getElementsByClassName("b")[0];
+		var box = document.getElementById("box");
+		var nav = document.getElementById("nav");
+		var oNavlist = nav.children;
+		var slider = document.getElementById("slider");
+		var left = document.getElementById("left");
+		var right = document.getElementById("right");
+		var index = 1;
+		var timer;
+		var isMoving = false;
+		var corein0=document.getElementsByClassName("core-in")[0];
+		var coreimg0=document.getElementsByClassName("core-img")[0];
+		var corein1=document.getElementsByClassName("core-in")[1];
+		var coreimg1=document.getElementsByClassName("core-img")[1];
+		var corein2=document.getElementsByClassName("core-in")[2];
+		var coreimg2=document.getElementsByClassName("core-img")[2];
+		var judge=1;
+		var arr=["g1","g2","g3","g4","g5","g6","g7","g8"];
+		coreimg0.onmouseover=function(){
+			judge=1;
+			var t=parseInt(getStyle(corein0,"height"));	
+			var down=setInterval(function(){
+				
+				corein0.style.height=t+"px";
+				t+=5;	
+				if(t>=192||judge==0){
+					clearInterval(down);
+				}
+			},1)
+		}
+		corein0.onmouseout=function(){
+			judge=0;
+			corein0.style.height=0+"px";
+		}
+		coreimg1.onmouseover=function(){
+			judge=1;
+			var t=parseInt(getStyle(corein1,"height"));	
+			var down=setInterval(function(){
+				
+				corein1.style.height=t+"px";
+				t+=5;	
+				if(t>=192||judge==0){
+					clearInterval(down);
+				}
+			},1)
+		}
+		corein1.onmouseout=function(){
+			judge=0;
+			corein1.style.height=0+"px";
+		}
+		coreimg2.onmouseover=function(){
+			judge=1;
+			var t=parseInt(getStyle(corein2,"height"));	
+			var down=setInterval(function(){
+				
+				corein2.style.height=t+"px";
+				t+=5;	
+				if(t>=192||judge==0){
+					clearInterval(down);
+				}
+			},1)
+		}
+		corein2.onmouseout=function(){
+			judge=0;
+			corein2.style.height=0+"px";
+		}
+		daohang.onclick=function(){
+		      document.getElementById("top").style.display='block';
+		}
+		img.onclick=function(){
+			 document.getElementById("top").style.display='none';
+		}
+
+		gobottom.onclick=function(){
+			var i=0;
+			var speed;
+			var a=setInterval(function(){
+				window.scrollTo(0,i);
+				speed=(1500-i)/10;
+				i+=speed;
+				
+				if(i>=1200){
+					clearInterval(a);
+				}
+			},60);
+			 
+		}
+		
+			var o=0;
+			setInterval(function(){
+				turn.src="images/"+arr[o]+".jpg";
+				o++;
+				if(o==7)
+					o=0;
+			},1000)
+		
+		var m=30;var i=0;
+		setInterval(function(){
+			
+			gobottom.style.bottom=m+"px";
+			if(i<50){
+				m++;
+			}	
+			i++;
+			if(i>=50){
+				m--;
+			}
+			if(i>=98){
+				i=0;
+			}
+		},30)
+		function getStyle(obj, attr){
+					if(obj.currentStyle){
+						return obj.currentStyle[attr];
+					} else {
+						return getComputedStyle(obj, null)[attr];
+					}
+				}
+		function animate(obj,json,callback){
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){
+				var isStop = true;
+				for(var attr in json){
+					var now = 0;
+					if(attr == 'opacity'){
+						now = parseInt(getStyle(obj,attr)*100);
+					}else{
+						now = parseInt(getStyle(obj,attr));
+					}
+					var speed = (json[attr] - now) / 8;
+					speed = speed>0?Math.ceil(speed):Math.floor(speed);
+					var cur = now + speed;
+					if(attr == 'opacity'){
+						obj.style[attr] = cur / 100;
+					}else{
+						obj.style[attr] = cur + 'px';
+					}
+					if(json[attr] !== cur){
+						isStop = false;
+					}
+				}
+				if(isStop){
+					clearInterval(obj.timer);
+					callback&&callback();
+				}
+			}, 30)
+		}
+
+		function next(){
+			if(isMoving){
+				return;
+			}
+			isMoving = true;
+			index++;
+			navmove();
+			animate(slider,{left:-1518*index},function(){
+				if(index==4 ){
+					slider.left=-1518;
+					index=1;
+				}
+				isMoving = false;
+			});
+		}
+		function prev(){
+			if(isMoving){
+				return;
+			}
+			isMoving = true;
+			index--;
+			navmove();
+			animate(slider,{left:-1518*index},function(){
+				if(index==0){
+					slider.left=-3*1518;
+					index=3;
+				}
+				isMoving = false;
+			});
+		}
+		var timer = setInterval(next, 3000);
+
+		b.onclick = next;
+		t.onclick = prev;
+		// 按钮切换
+		function navmove(){
+			for(var i=0;i<oNavlist.length;i++){
+				oNavlist[i].className = "";
+			}
+			if(index >3){
+				oNavlist[0].className = "active";
+			} else if(index <= 0){
+				oNavlist[2].className = "active";
+			} else{
+				oNavlist[index -1].className ="active";
+			}
+		}
+		for(var i = 0;i < oNavlist.length;i++){
+			oNavlist[i].idx = i;   // 绑定属性
+			oNavlist[i].onclick = function(){
+				index = this.idx+1;
+				navmove();
+				animate(slider,{left:-1518*index});
+			}
+		}
+
+	</script>
+</body>
+</html>

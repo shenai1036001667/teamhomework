@@ -2,36 +2,29 @@
 <html>
 	<head>
 		<meta charset = "utf-8" />
-		<title>Mail Us</title>
+		<title>联系我们</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<style type="text/css">
-			*{
-				margin: 0px;
-				padding: 0px;
-			}
-			a{
-				text-decoration: none;
-				color: #fff;
-				font-family: "华文新魏";
-				font-size: 20px;
-			}
-			ol, ul, li{
-				list-style: none;
-			}
-			
-			.banner{
+			.text0{
 				width: 100%;
-				height: 380px;
-				background-image: url("images/2.jpg");
+				height: 300px;
+				position: relative;
+				top: 80px;
 			}
-			.meau{
+			.text{
+				height: 45px;
+			}
+			.text p{
+				width: 300px;
+				height:35px;
+				margin: 5px;
+				border-radius: 5px;
+				background-color: rgba(4, 10, 125, 0.5);
+				position: absolute;
 				color: #fff;
+				line-height: 35px;
+				text-indent: 10px;
 			}
-			.banner .p{
-				display: inline-block;
-				font-family: "华文新魏";
-				font-size: 20px;
-			}
-			
 			/*content开始*/
 			.content-wrap{
 				width: 100%;
@@ -44,9 +37,23 @@
 				position: relative;
 			}
 			.title{
+				width: 1100px;
+				height: 42px;
+				line-height: 42px;
+			}
+			.title p{
 				font-family: "华文新魏";
 				font-size: 40px;
 				color: rgb(49, 189, 253);
+				display: inline-block;
+			}
+			.title .heng{
+				display: inline-block;
+				background-color: red;
+				width: 100px;
+				height: 3px;
+				margin-left: 10px;
+				margin-bottom: 10px;
 			}
 			.inputs{
 				margin-top: 50px;
@@ -91,55 +98,38 @@
 				bottom: 80px;
 				left: 450px;
 			}
-			/*content结束*/
-			/*pic开始*/
-			.pic-wrap{
-				width: 100%;
-				height: 300px;
-
-			}
-			/*bottom开始*/
-			.bottom{
-				background-color: black;
-				width: 1600px;
-				height: 700px;
-				position: relative;
-			}
-			.bottom .a{
-				float: left;
-				margin-left: 100px;
-				margin-top: 100px;
-				border:white 2px;
-				width: 300px;
-				height: 200px;
-				border-left: solid white;
-				
-			}
-			.bottom span{
-				color: white;
-				font-family: "华文新魏";
-			}
-			.bottom .title{
-				width: 500px;
-				height: 200px;
-				position: absolute;
-				top: 350px;
-				left: 500px;
-			}
-			/*bottom结束*/
 		</style>
 	</head>
 	<body>
 		<div class="banner">
-			<div class="meau">
-				<a href="#">JOY RIDE</a>
-				<p class="p">Call Us:012 345 6789</p>
+			<div class="top" id="top">
+				<ul>
+					<li><a href="home.html">首页</a></li>
+					<li><a href="classify.html">分类</a></li>
+					<li><a href="合作作业.html">商店</a></li>
+					<li><a href="车库.html">车库</a></li>
+					<li><a href="services.html">服务</a></li>
+					<li><a href="mail.html">联系我们</a></li>
+				</ul>
+				<img src="images/close.png" id="img">
+			</div>
+			<div id="daohang"><a href="#" id="a"><span style="font-size: 30px">==</span></a></div>
+			<div class="text0">
+				<div class="text"><p class="p"></p></div>
+				<div class="text"><p class="p"></p></div>
+				<div class="text"><p class="p"></p></div>
+				<div class="text"><p class="p"></p></div>
+				<div class="text"><p class="p"></p></div>
+				<div class="text"><p class="p"></p></div>
 			</div>
 		</div>
 		<div class="content-wrap">
 			<form>
 				<div class="content">
-					<div class="title">Mail Us</div>
+					<div class="title">
+						<p>Mail Us</p>
+						<div class="heng"></div>
+					</div>
 					<div class="inputs">
 						<div class="outer" id="out">
 							<textarea name="area" id="inp" class="same">写下你想说的话</textarea>
@@ -156,35 +146,34 @@
 						<div>
 							<input type="submit" value="提交" name="su" id="su" class="same">
 						</div>
+						
 					</div>
 				</div>
 			</form>
 		</div>
-		<div class="pic-wrap">
-			<p>图片</p>
-		</div>
 		<div class="bottom">
 			<div class="a" style="margin-left: 250px;">
-				<span style="color: red;font-size:25px;margin-left: 38px;">给我们打电话</span><br><br><br>
-				<span style="margin-left: 38px;">办公电话：1231234564</span><br><br><br>
-				<span style="margin-left: 38px"><span>传真：4564645646</span></span>
+				<span class="red">给我们打电话</span><br><br><br>
+				<span>办公电话：1231234564</span><br><br><br>
+				<span><span>传真：4564645646</span></span>
 			</div>
 			<div class="a">
-				<span style="color: red;font-size:25px;margin-left: 38px;">探望我们</span><br><br><br>
-				<span style="margin-left: 38px;">河北省石家庄市河北师范大学</span><br><br><br>
-				<span style="margin-left: 38px"><span>诚朴圆三号楼314</span></span>
+				<span class="red">探望我们</span><br><br><br>
+				<span>河北省石家庄市河北师范大学</span><br><br><br>
+				<span><span>诚朴圆三号楼314</span></span>
 			</div>
 			<div class="a">
-				<span style="color: red;font-size:25px;margin-left: 38px;">写信给我们</span><br><br><br>
-				<span style="margin-left: 38px;">邮箱：15646561511@qq.com</span><br><br><br>
-				<span style="margin-left: 38px"><span>咨询： Info@Enquiry.Com</span></span>
+				<span class="red">写信给我们</span><br><br><br>
+				<span>邮箱：15646561511@qq.com</span><br><br><br>
+				<span><span>咨询： Info@Enquiry.Com</span></span>
 			</div>
 			<div class="title" style="text-align: center;">	
-				<span style="font-size: 40px;color: red">欢乐骑行</span>	<br>
+				<span style="font-size: 40px;" class="red">欢乐骑行</span>	<br>
 				<span>学校</span>
 			</div>
 		</div>
 		
+		<script type="text/javascript" src="nav.js"></script>
 		<script type="text/javascript">
 			function getStyle(obj, style){
 				if(obj.currentStyle)
@@ -198,8 +187,6 @@
 			//通过for循环为每个类名为same的结点添加事件属性：鼠标划过和划出、元素获得焦点和失去焦点
 			//添加tag属性用来记录该结点原本的value值
 			for(var i = 0;i < same.length;++i){
-				// same[i].setAttribute("onmouseover", "changeSize(this)");
-				// same[i].setAttribute("onmouseout", "backSize(this)");
 				same[i].setAttribute("tag", same[i].value);
 				same[i].setAttribute("onclick", "changeValue(this)");
 				same[i].setAttribute("onblur", "backValue(this)");
@@ -215,6 +202,54 @@
 					that.value = that.getAttribute("tag");
 			}
 			
+			var arr = ["支持国产！！！", "售后服务特别好", "值得信赖", "有好多帅气的小哥哥", "种类齐全", "价格美丽", "性价比特别高", "老板人很好", "特别酷"];
+			var colors = ["rgba(40, 230, 55, 0.5)", "rgba(230, 80, 125, 0.5)", "rgba(100, 100, 225, 0.5)", "rgba(255, 255, 100, 0.5)", "rgba(255, 150, 100, 0.5)", "rgba(100, 30, 255, 0.7)", "rgba(10, 30, 255, 0.5)", "rgba(255, 30, 255, 0.5)", "rgba(250,130,130)"];
+			var text = document.getElementsByClassName("text");
+			var p = document.getElementsByClassName("p");
+			var position, color, content;
+			//随机生成距离左侧的距离
+			function getPosition(){
+				position = parseInt(Math.random() * 1200);
+				return position;
+			}
+
+			//随机生成颜色
+			function getColor(){
+				color = parseInt(Math.random() * colors.length);
+				return color;
+			}
+
+			//文字随机出现
+			function getContent(){
+				content = parseInt(Math.random() * arr.length);
+				return content;
+			}
+
+			//每个p距左端的距离随机生成、背景颜色随机生成、文字随机出现
+			for(var i = 0;i < p.length;++i){
+				position = getPosition();
+				p[i].style.left = position + "px";
+				color = getColor();
+				p[i].style.backgroundColor = colors[color];
+				content = getContent();
+				p[i].innerHTML = arr[content];
+				animate1(p[i]);
+			}
+
+			//走完一趟之后重新随机生成
+			function animate1(that){
+				var end = setInterval(function(){
+					var now = parseInt(that.style.left);
+					var speed = 1;
+					if(now <= -300){
+						that.style.left = "1200px";
+						that.style.backgroundColor = colors[getColor()];
+						that.innerHTML = arr[getContent()];
+					}
+					else
+						that.style.left = now - speed + 'px';
+				}, 10);
+			}
 		</script>
 	</body>
 </html>
