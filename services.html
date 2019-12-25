@@ -3,6 +3,7 @@
 <head>
 	<title>Serivces</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<style type="text/css">
 		ul,li,ol{
 			list-style: none;
@@ -15,7 +16,7 @@
 			text-decoration: none;
 			color: white;
 		}
-	.top{
+	/*.top{
 			display: none;
 			width: 100%;
 			height: 65px;
@@ -45,7 +46,7 @@
 			top: 50px;
 			left: 300px;
 			margin-top: 20px;
-		}
+		}*/
 		.team-section{
 			padding: 4.5em 0;
 			background-color: #eee;
@@ -165,7 +166,7 @@
 		.nav{
 			background: url('image/work.jpg');
 			background-repeat: no-repeat;
-			height: 500px;
+			height: 380px;
 			width: 100%;
 		}
 		.mainBody{
@@ -210,7 +211,7 @@
 			background: url('image/se3.png');
 			background-repeat: no-repeat;
 		}
-		.bottom{
+		/*.bottom{
 			background-color: black;
 			width: 100%;
 			height: 600px;
@@ -238,14 +239,29 @@
 			position: absolute;
 			top: 350px;
 			left: 400px;
-		}
+		}*/
 	</style>
 </head>
 <body>
 	<!-- 导航栏 -->
-	<div class="nav">
+
+	<div class="banner">
+		<div class="top" id="top">
+			<ul>
+				<li><a href="home.html">首页</a></li>
+				<li><a href="classify.html">分类</a></li>
+				<li><a href="合作作业.html">商店</a></li>
+				<li><a href="车库.html">车库</a></li>
+				<li><a href="services.html">服务</a></li>
+				<li><a href="mail.html">联系我们</a></li>
+			</ul>
+			<img src="images/close.png" id="img">
+		</div>
+		<div id="daohang"><a href="#" id="a"><span style="font-size: 30px">==</span></a></div>
+	</div>
+	<!-- <div class="nav">
 		<h1 style="position: absolute;right: 30px; top: 20px;cursor: pointer;" class="appear">==</h1>
-	<div class="top" id="top">
+		<div class="top" id="top">
 				<ul>
 					<li><a href="home.html">首页</a></li>
 					<li><a href="classify.html">分类</a></li>
@@ -256,7 +272,7 @@
 				</ul>
 				<img src="image/close.png" style="position: relative;top:-1px;left: 200px" id="img">
 			</div>		
-	</div>
+	</div> -->
 	<!-- 主体部分 -->
 	<div class="mainBody">
 		<div class="mainbody-text">
@@ -473,6 +489,27 @@
 	</div>
 	<div class="bottom">
 		<div class="a" style="margin-left: 250px;">
+			<span class="red">给我们打电话</span><br><br><br>
+			<span>办公电话：1231234564</span><br><br><br>
+			<span><span>传真：4564645646</span></span>
+		</div>
+		<div class="a">
+			<span class="red">探望我们</span><br><br><br>
+			<span>河北省石家庄市河北师范大学</span><br><br><br>
+			<span><span>诚朴圆三号楼314</span></span>
+		</div>
+		<div class="a">
+			<span class="red">写信给我们</span><br><br><br>
+			<span>邮箱：15646561511@qq.com</span><br><br><br>
+			<span><span>咨询： Info@Enquiry.Com</span></span>
+		</div>
+		<div class="title" style="text-align: center;">	
+			<span style="font-size: 40px;" class="red">欢乐骑行</span>	<br>
+			<span>学校</span>
+		</div>
+	</div>
+	<!-- <div class="bottom">
+		<div class="a" style="margin-left: 250px;">
 			<span style="color: red;font-size:25px;margin-left: 38px;">给我们打电话</span><br><br><br>
 			<span style="margin-left: 38px;">办公电话：1231234564</span><br><br><br>
 			<span style="margin-left: 38px"><span>传真：4564645646</span></span>
@@ -491,8 +528,9 @@
 			<span style="font-size: 40px;color: red">欢乐骑行</span>	<br>
 			<span>学校</span>
 		</div>
-	</div>
+	</div> -->
 </body>
+<script type="text/javascript" src="nav.js"></script>
 <script type="text/javascript">
 		var bg = document.getElementsByClassName("special-guest");
 		var img = document.getElementsByClassName("special-man");
