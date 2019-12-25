@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录页面</title>
+	<style>
+		body{
+			background-image: url('model1.jpg'); 
+			background-repeat: no-repeat;
+			background-size: 100%
+		}
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		a{
+			text-decoration: none;
+			color: rgb(0, 100, 255);
+		}
+		input:focus,select:focus{
+			border:1px solid rgb(50,50,50);
+			outline: none;
+		}
+		.box1{
+			width: 800px;
+			height: 400px;
+			padding: 0 20px;
+			margin: 50px auto;
+			z-index: 3;
+			float: left;
+			display: block;
+			position: relative;
+			left: 250px;
+			background-color: rgba(255, 255, 255, 0.1);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			top: 20px;
+		}
+		.box2{
+			width: 800px;
+			height: 400px;
+			padding: 0 20px;
+			margin: 50px auto;
+			z-index: 0;
+			float: left;
+			display: none;
+			position: relative;
+			left: 250px;
+			top: 20px;
+			background-color: rgba(255, 255, 255, 0.1);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		.tit{
+			margin-top: 5px;
+			margin-bottom: 30px;
+		}
+		.brand{
+			color: rgb(120, 120, 120);
+			font-size: 18px;
+			margin-right: 20px;
+			/*border-color:white;*/
+			background-color: rgba(255, 255, 255, 0);
+			position: relative;
+			top: 5px;
+		}
+		.brand1{
+			color: rgb(120, 120, 120);
+			font-size: 18px;
+			margin-right: 20px;
+			/*border-color:white;*/
+			background-color: rgba(255, 255, 255, 0);
+			position: relative;
+			top: 5px;
+		}
+		.inp{
+			width: 200px;
+			height: 30px;
+			text-indent: 8px;
+			border-color: ;
+		}
+		.notice{
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;
+		}
+
+		.code{
+			width: 150px;
+		}
+		.getCode{
+			width: 100px;
+			height: 44px;
+			float: right;
+			border-color: white;
+			background-color: #000;
+			color: white;
+			position: relative;
+			left: -510px;
+			top: -5px;
+		}
+		.codeImg{
+			height: 40px;
+		}
+		.btn{
+			background: rgba(255, 255, 255, 0.1);
+			width: 100%;
+			height: 40px;
+			border: none;
+			border-color: black;	
+			margin-top: 8px;
+			color:rgb(200,200,200);
+			border-radius: 3px;
+			position: relative;
+			top: 50px;
+			outline: none;
+		}
+		.btn2{
+			background: rgba(255,255,255,0.1);
+			width: 100%;
+			height: 40px;
+			border: none;
+			border-color: black;
+			margin-top: 8px;
+			color: rgb(200,200,200);
+			border-radius: 3px;
+			position: relative;
+			top: 218px;
+		}
+		.checkbox{
+			color: #666;
+		}
+		.notice {
+			font-size: 12px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<p class="tit">
+			<span><button class="brand">用户注册</button></span>
+			<span><button class="brand">用户登录</button></span>
+		</p>
+		<span style="color: rgb(20,20,20)">手机号:</span>
+		<button style="background: rgba(255,255,255,0.1)">+86</button>
+		<input class="inp" type="text" placeholder="请输入手机号" style="background: rgba(255,255,255,0.1)">
+		<p class="notice"></p>
+		<span style="color: rgb(20,20,20)">请输入密码:</span>
+		<input class="inp" type="password" placeholder="请输入密码" style="background: rgba(255,255,255,0.1)">
+		<p class="notice"></p>
+		<span style="color: rgb(20,20,20)">请确认密码:</span>
+		<input class="inp" type="password" placeholder="请确认密码" style="background: rgba(255,255,255,0.1)">
+		<p class="notice"></p>
+		
+		<div>
+			<input class="inp code" type="text" placeholder="验证码" style="background: rgba(255,255,255,0.1)">
+			<button class="getCode" style="background: rgba(255,255,255,0.1)"><span style="color: rgb(80,80,80)">获取验证码</span></button>
+		</div>
+		<div class="codeImg">
+			<!-- 点击‘获取验证码’按钮后，在此处添加 验证码图片的img标签 -->
+		</div>
+		<div>
+			<input type="checkbox" name="" checked=""><span style="color: rgb(20,20,20)">我已同意</span><a href="#">《淘车服务协议》</a>
+		</div>
+		<p class="notice"></p>
+		<button class="btn">注册</button>
+	</div>
+	<div class="box2">
+		<p class="tit">
+			<span><button class="brand1">用户注册</button></span>
+			<span><button class="brand1">用户登录</button></span>
+		</p>
+		<span style="color: rgb(20,20,20)">手机号:</span>
+		<button style="background: rgba(255,255,255,0.1)">+86</button>
+		<input class="inp" type="text" placeholder="请输入手机号" style="background: rgba(255,255,255,0.1)">
+		<p class="notice"></p>
+		<span style="color: rgb(20,20,20)">请输入密码:</span>
+		<input class="inp" type="password" placeholder="请输入密码" style="background: rgba(255,255,255,0.1)">
+		<p class="notice"></p>
+		<input type="checkbox" checked><span style="color: rgb(20,20,20);background-color:rgba(255,255,255,0.1)">下次自动登录</span>
+		<button class="btn2">登录</button>
+	</div>
+	<script>
+		var box1 = document.getElementsByClassName("box1");
+		var box2 = document.getElementsByClassName("box2");
+		var inp = document.getElementsByClassName("inp");
+		var notice = document.getElementsByClassName("notice");
+		inp[0].onfocus = function () {
+			notice[0].innerText = "请输入13位手机号";
+		}
+		inp[1].onfocus = function () {
+			notice[1].innerText = "请输入4-12位密码";
+		}
+		var a;
+		inp[0].onblur = function () {
+			var z = /^.{13,13}$/;
+			a = z.test(inp[0].value);
+			if (a) {
+				notice[0].innerText = " ";
+			} else {
+				notice[0].innerText = "手机号位数不对";
+			}
+		}
+		var b;
+		inp[1].onblur = function () {
+			var z = /^.{4,12}$/;
+			b = z.test(inp[1].value);
+			if (b) {
+				notice[1].innerText = "";
+			} else {
+				notice[1].innerText = "密码位数不对";
+			}
+		}
+		var getCode = document.getElementsByClassName("getCode");
+		var arry = [{
+			name: 'zAZfB.jpg',
+			code: 'zAZfB',
+		}, {
+			name: 'ZEhUN.jpg',
+			code: 'ZEhUN'
+		}, {
+			name: 'zFC9H.jpg',
+			code: 'zFC9H'
+		}, {
+			name: 'zhWY9.jpg',
+			code: 'zhWY9'
+		}, {
+			name: 'Zin4c.jpg',
+			code: 'Zin4c'
+		}, {
+			name: 'ZITGj.jpg',
+			code: 'ZITGj'
+		}, {
+			name: 'zJ6iV.jpg',
+			code: 'zJ6iV'
+		}, {
+			name: 'zjsKP.jpg',
+			code: 'zjsKP'
+		}, {
+			name: 'ZKc9S.jpg',
+			code: 'ZKc9S'
+		}, {
+			name: 'zKDXU.jpg',
+			code: 'zKDXU'
+		}]
+		var i;
+		var but = document.getElementsByClassName("brand");
+		var but1 = document.getElementsByClassName("brand1");
+		var but2 = document.getElementsByClassName("getCode");
+		var codeImg = document.getElementsByClassName("codeImg");
+		but[0].onclick = function () {
+			// box1.style.zIndex = 0;
+			box2[0].style.display = "none";
+			box1[0].style.display = "block";
+		}
+		but[1].onclick = function () {
+			// box1.style.zIndex = 0;
+			box1[0].style.display = "none";
+			box2[0].style.display = "block";
+		}
+		but1[0].onclick = function () {
+			// box1.style.zIndex = 0;
+			box2[0].style.display = "none";
+			box1[0].style.display = "block";
+		}
+		but1[1].onclick = function () {
+			// box1.style.zIndex = 0;
+			box1[0].style.display = "none";
+			box2[0].style.display = "block";
+		}
+		but2[0].onclick = function(){
+			i = parseInt(Math.random() * 9);
+			notice[2].innerText = " ";
+			codeImg[0].innerHTML = "<img src='image/" + arry[i].name + "'>";
+		}
+		var c;
+		inp[2].onfocus = function () {
+			notice[2].innerText = " ";
+		}
+		inp[2].onblur = function () {
+			c = (arry[i].code === inp[2].value);
+			console.log(c);
+			if(!c) {
+				notice[2].innerText = "验证码错误";
+			}else{
+				notice[2].innerText = " ";
+			}
+		}
+		var btn = document.getElementsByClassName("btn");
+		var btn2 = document.getElementsByClassName("btn2");
+		btn[0].onclick = function () {
+			if (a && b && c) {
+				alert("注册成功");
+			} else {
+				alert("有信息输入错误，请重新输;");
+			}
+		}
+		btn2[0].onclick = function(){
+			// located.href();
+		}
+	</script>
+</body>
+</html>
