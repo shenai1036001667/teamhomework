@@ -208,7 +208,7 @@
 			var position, color, content;
 			//随机生成距离左侧的距离
 			function getPosition(){
-				position = parseInt(Math.random() * 1400);
+				position = parseInt(Math.random() * 1200);
 				return position;
 			}
 
@@ -241,7 +241,7 @@
 					var now = parseInt(that.style.left);
 					var speed = 1;
 					if(now <= -300){
-						that.style.left = "1400px";
+						that.style.left = "1200px";
 						that.style.backgroundColor = colors[getColor()];
 						that.innerHTML = arr[getContent()];
 					}
