@@ -1,0 +1,157 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+ol, ul, li{
+	list-style: none;
+}
+a{
+	text-decoration:none;
+	color: #fff;
+}
+.content-wrap{
+	width: 100%;
+	height: 860px;
+	background-color: rgba(4,104,153,0.5); 
+	padding-top: 40px;
+}
+/*content开始*/
+.content{
+	width: 1100px;
+	height: 500px;
+	margin: 0px auto;
+}	
+.left{
+	width: 500px;
+	height: 400px;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+#top1{
+	width: 500px;
+	height: 300px;
+	position: relative;
+}
+.box{
+	width: 2500px;
+	height: 300px;
+	position: absolute;
+	left: -500px;
+}
+.slide{
+	width: 500px;
+	height: 200px;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	padding-top: 100px;
+}
+.min{
+	position: relative;
+}
+.small{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	left: 85px;
+	top: 0px;
+	background-color: #ccc;
+	cursor: move;
+	display: none;
+	opacity: 0.5;
+}
+#top1>span{
+	display: block;
+	width: 30px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+	color: #000;
+	background-color: #fff;
+	font-size: 30px;
+	position: absolute;
+	top: 130px;
+	opacity: 0;
+}
+/*< >前后滑动小箭头*/
+#left{
+	left: 0px;
+}
+#right{
+	right: 0px;
+}
+/*下面对应的滑动图片*/
+#bottom{
+	width: 500px;
+	height: 100px;
+	position: absolute;
+	top: 300px;
+}
+.image{
+	width: 125px;
+	height: 80px;
+	border: 1px solid #abc;
+	float: left;
+	padding-top: 15px;
+}
+.image>img{
+	opacity: 0.25;
+}
+#active{
+	opacity: 1;
+}
+/*简介*/
+.text{
+	width: 270px;
+	line-height: 28px;
+	display: inline-block;
+}
+.text>button{
+	height: 23px;
+	width: 75px;
+	border-width: 2px;
+	border-radius: 5px;
+	background-color: #fff;
+	outline-width: 0px;
+}
+/*右边放大*/
+.right{
+	width: 320px;
+	height: 400px;
+	display: inline-block;
+}
+.list{
+	width: 320px;
+	height: 320px;
+	overflow: hidden;
+	position: relative;
+	display: none;
+}
+#Bimg{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+/*下面的四个楦头*/
+#a{
+	margin-top: 100px;
+	text-align: center;
+}
+.li{
+	display: inline-block;
+}
+/*footer开始*/
+.bottom-wrap{
+	width: 100%;
+	height: 500px;
+	background-color: #000;
+}
+/*footer开始*/
+.footer-wrap{
+	width: 100%;
+	height: 100px;
+	background-color: rgb(33,33,33);
+}
