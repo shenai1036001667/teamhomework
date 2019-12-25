@@ -5,6 +5,26 @@
 		<title>联系我们</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<style type="text/css">
+			.text0{
+				width: 100%;
+				height: 300px;
+				position: relative;
+				top: 80px;
+			}
+			.text{
+				height: 45px;
+			}
+			.text p{
+				width: 300px;
+				height:35px;
+				margin: 5px;
+				border-radius: 5px;
+				background-color: rgba(4, 10, 125, 0.5);
+				position: absolute;
+				color: #fff;
+				line-height: 35px;
+				text-indent: 10px;
+			}
 			/*content开始*/
 			.content-wrap{
 				width: 100%;
@@ -93,6 +113,14 @@
 				<img src="images/close.png" id="img">
 			</div>
 			<div id="daohang"><a href="#" id="a"><span style="font-size: 30px">==</span></a></div>
+			<div class="text0">
+				<div class="text"><p class="p"></p></div>
+				<div class="text"><p class="p"></p></div>
+				<div class="text"><p class="p"></p></div>
+				<div class="text"><p class="p"></p></div>
+				<div class="text"><p class="p"></p></div>
+				<div class="text"><p class="p"></p></div>
+			</div>
 		</div>
 		<div class="content-wrap">
 			<form>
@@ -173,6 +201,54 @@
 					that.value = that.getAttribute("tag");
 			}
 			
+			var arr = ["支持国产！！！", "售后服务特别好", "值得信赖", "有好多帅气的小哥哥", "种类齐全", "价格美丽", "性价比特别高", "老板人很好", "特别酷"];
+			var colors = ["rgba(40, 230, 55, 0.5)", "rgba(230, 80, 125, 0.5)", "rgba(100, 100, 225, 0.5)", "rgba(255, 255, 100, 0.5)", "rgba(255, 150, 100, 0.5)", "rgba(100, 30, 255, 0.7)", "rgba(10, 30, 255, 0.5)", "rgba(255, 30, 255, 0.5)", "rgba(250,130,130)"];
+			var text = document.getElementsByClassName("text");
+			var p = document.getElementsByClassName("p");
+			var position, color, content;
+			//随机生成距离左侧的距离
+			function getPosition(){
+				position = parseInt(Math.random() * 1400);
+				return position;
+			}
+
+			//随机生成颜色
+			function getColor(){
+				color = parseInt(Math.random() * colors.length);
+				return color;
+			}
+
+			//文字随机出现
+			function getContent(){
+				content = parseInt(Math.random() * arr.length);
+				return content;
+			}
+
+			//每个p距左端的距离随机生成、背景颜色随机生成、文字随机出现
+			for(var i = 0;i < p.length;++i){
+				position = getPosition();
+				p[i].style.left = position + "px";
+				color = getColor();
+				p[i].style.backgroundColor = colors[color];
+				content = getContent();
+				p[i].innerHTML = arr[content];
+				animate1(p[i]);
+			}
+
+			//走完一趟之后重新随机生成
+			function animate1(that){
+				var end = setInterval(function(){
+					var now = parseInt(that.style.left);
+					var speed = 1;
+					if(now <= -300){
+						that.style.left = "1400px";
+						that.style.backgroundColor = colors[getColor()];
+						that.innerHTML = arr[getContent()];
+					}
+					else
+						that.style.left = now - speed + 'px';
+				}, 10);
+			}
 		</script>
 	</body>
 </html>
